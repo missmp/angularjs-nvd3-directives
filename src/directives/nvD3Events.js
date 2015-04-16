@@ -125,6 +125,10 @@ function processEvents(chart, scope) {
 		chart.scatter.dispatch.on('elementMouseout.tooltip.directive', function (event) {
 			scope.$emit('elementMouseout.tooltip.directive', event);
 		});
+		
+		chart.lines.dispatch.on('elementClick.directive', function (event) {
+			scope.$emit('elementClick.directive', event);
+		});
 	}
 
 	if (chart.bullet) {
